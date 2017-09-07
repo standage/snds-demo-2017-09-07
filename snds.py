@@ -35,3 +35,6 @@ def test_example():
 
 def test_single_value():
     assert sums([5] * 25) == [125]
+
+def test_negative_values():
+    assert sums([-3, -2, -1, -2, -3]) == [-6, -2, -3]
