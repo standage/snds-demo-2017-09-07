@@ -4,7 +4,19 @@ def sums(values):
     decreasing sub-list. For example, if `values = [1, 2, 3, 3, 1, 5, 6, 3, 1,
     2, 3]`, the output should be `[9, 12, 3, 6]`.
     """
-    pass
+    sumlist = list()
+    
+    buffer = list()
+    for value in values:
+        if len(buffer) > 0 and value < buffer[-1]:
+            newsum = sum(buffer)
+            sumlist.append(newsum)
+            buffer = list()
+        buffer.append(value)
+    newsum = sum(buffer)
+    sumlist.append(newsum)
+    
+    return sumlist
 
 def test_empty():
     assert sums([]) == []
