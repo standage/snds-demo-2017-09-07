@@ -4,6 +4,8 @@ def sums(values):
     decreasing sub-list. For example, if `values = [1, 2, 3, 3, 1, 5, 6, 3, 1,
     2, 3]`, the output should be `[9, 12, 3, 6]`.
     """
+    if len(values) == 0:
+        return []
     sumlist = list()
     
     buffer = list()
