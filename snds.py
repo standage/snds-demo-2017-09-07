@@ -5,3 +5,6 @@ def sums(values):
     2, 3]`, the output should be `[9, 12, 3, 6]`.
     """
     pass
+
+def test_empty():
+    assert sums([]) == []
